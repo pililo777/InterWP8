@@ -14,11 +14,13 @@
     <ClCompile Include="lex.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="run.cpp" />
+    <ClCompile Include="prueba.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppWINRT.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="nodo.h" />
     <ClInclude Include="ytab.h" />
+    <ClInclude Include="prueba.h" />
   </ItemGroup>
 </Project>

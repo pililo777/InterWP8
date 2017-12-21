@@ -1,9 +1,22 @@
 #include "pch.h"
 
+
+#include "nodo.h"
+
+extern   elnodo * pila_programas[32]; 
+extern   elnodo * procedimientos[127]; //cambiar esta forma
+extern   int idx_prg;
+extern   int idx_prc;
+extern   void yyerror(char *);
+
+
+namespace CppWINRT
+ {
+
 #include "malloc.h"
 
 extern  int yylex();
-extern   void yyerror(char *);
+
 
 
 /*  A Bison parser, made from grammar.y with Bison version GNU Bison version 1.24
@@ -51,12 +64,6 @@ extern   void yyerror(char *);
 
 //#linea 2 "grammar.y"
 
-#include "nodo.h"
-
-extern   elnodo * pila_programas[32]; 
-extern   elnodo * procedimientos[127]; //cambiar esta forma
-extern   int idx_prg;
-extern   int idx_prc;
 
 //#define MSDOS
 //char constantes[127][127];
@@ -788,7 +795,7 @@ yyreduce:
 case 1:
 //#linea 55 "grammar.y"
 {  pila_programas[idx_prg] = (yyvsp[0].nodo); /* stmtseq */ ;
-
+	
       idx_prg++;
    ;
     break;}
@@ -1181,3 +1188,4 @@ yyerrhandle:
 //#linea 153 "grammar.y"
 
 
+}

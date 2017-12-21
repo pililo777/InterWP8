@@ -1,8 +1,45 @@
- 
-#include "pch.h" 
+#include "pch.h"  
 #include "stdio.h"
+ #include "nodo.h"
+
+#include "prueba.h"
 
 #define _CRT_SECURE_NO_WARNINGS
+
+
+
+/* cfront 1.2 defines "c_plusplus" instead of "__cplusplus" */
+#ifdef c_plusplus
+#ifndef __cplusplus
+#define __cplusplus
+#endif
+#endif
+
+
+#ifdef __cplusplus
+
+#include <stdlib.h>
+#include <string.h>
+//#include <unistd.h>
+
+/* Use prototypes in function declarations. */
+#define YY_USE_PROTOS
+
+/* The "const" storage-class-modifier is valid. */
+#define YY_USE_CONST
+
+#else	/* ! __cplusplus */
+
+
+#if __STDC__
+
+#define YY_USE_PROTOS
+#define YY_USE_CONST
+
+#endif	/* __STDC__ */
+#endif	/* ! __cplusplus */
+
+
 
 extern  void nextline(void);
 extern  void yyerror(char *);
@@ -10,11 +47,54 @@ extern int nodos;
 
 extern FILE * fichero;
 
+char constantes[127][127];
+char variables[127][127];
+
+
+static char contador; 
+
+struct elnodo * nuevonodo(void);
+
+
+
+ 
+ extern int linenumber;
+
+
+
+
+namespace CppWINRT
+ {
+
+
+char contadorvar;    //se ha quitado estatic
+
+ 
+ elnodo * nuevonodo()  {
+ elnodo * p;
+ //ast *a;
+ //a = new ast();
+
+p = (elnodo *) malloc(sizeof(struct elnodo));
+
+nodos++;
+
+p->num = 0;
+//p->tipo = 9999;
+ 
+p->subnodos = 0;
+// p->nodo1 = NULL;
+
+return p;
+
+}
+
+
 
 //int linenumber = 1; 
 
 //static int nro_decimales = 0;
-#include "nodo.h"
+
 
 
 
@@ -73,38 +153,8 @@ extern   YYSTYPE yylval;
 #define YY_FLEX_MAJOR_VERSION 2
 #define YY_FLEX_MINOR_VERSION 5
 
-#include <stdio.h>
+ 
 
-
-/* cfront 1.2 defines "c_plusplus" instead of "__cplusplus" */
-#ifdef c_plusplus
-#ifndef __cplusplus
-#define __cplusplus
-#endif
-#endif
-
-
-#ifdef __cplusplus
-
-#include <stdlib.h>
-#include <string.h>
-//#include <unistd.h>
-
-/* Use prototypes in function declarations. */
-#define YY_USE_PROTOS
-
-/* The "const" storage-class-modifier is valid. */
-#define YY_USE_CONST
-
-#else	/* ! __cplusplus */
-
-#if __STDC__
-
-#define YY_USE_PROTOS
-#define YY_USE_CONST
-
-#endif	/* __STDC__ */
-#endif	/* ! __cplusplus */
 
 #ifdef __TURBOC__
  #pragma warn -rch
@@ -639,25 +689,22 @@ static char *yy_last_accepting_cpos;
 char *yytext;
 #define INITIAL 0
 /* '[\x20-\x7D]{-}[\']+'  {   para LITERAL, en linux */
-struct elnodo * nuevonodo(void);
 
-char constantes[127][127];
-char variables[127][127];
+
+
 
 #include "stdio.h"
 //#include "ytab.h"
 //extern YYSTYPE  yylval;
 
-static char contador; 
-char contadorvar;    //se ha quitado estatic
 
-extern int linenumber;
+
 int  LineaInicial ;
 
 char instala(char x) 
 
 {
-   int i;
+   unsigned int i;
    strcpy (constantes[x],  yytext);
    i=0;
    while ( i < (strlen(yytext-2) ) ) { 
@@ -2012,22 +2059,8 @@ int yywrap() { return 1; }
 #endif
 
 
- elnodo * nuevonodo()  {
- elnodo * p;
-p = (elnodo *) malloc(sizeof(struct elnodo));
-
-nodos++;
-
-p->num = 0;
-//p->tipo = 9999;
- 
-p->subnodos = 0;
-// p->nodo1 = NULL;
-
-return p;
-
-}
 
 
 
  
+ }

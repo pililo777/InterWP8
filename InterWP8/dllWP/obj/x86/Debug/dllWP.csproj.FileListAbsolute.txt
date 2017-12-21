@@ -1,0 +1,4 @@
+D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\dllWP\Bin\x86\Debug\dllWP.dll
+D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\dllWP\Bin\x86\Debug\dllWP.pdb
+D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\dllWP\obj\x86\Debug\dllWP.dll
+D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\dllWP\obj\x86\Debug\dllWP.pdb

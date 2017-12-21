@@ -1,8 +1,10 @@
 #include "pch.h"
-
-
 #include "nodo.h"
 #include "stdio.h"
+
+extern  char variables[127][127];
+extern   char constantes[127][127];
+double var[127];  // 127 variables numericas e indices
 extern FILE * fichero;
 
 elnodo * procedimientos[127]; //cambiar esta forma
@@ -12,16 +14,23 @@ elnodo * pila_programas[32];
   int idx_prg = 0;
 
 
+
+
+
+
+namespace CppWINRT
+ {
+
+
 extern "C" char * strcpy ( char *  , const char *   );
 extern "C"  int strcmp ( const char *  , const char *   );
 extern  int linenumber;
 extern   int LineaInicial;
+extern struct elnodo * nuevonodo();
 
-extern  char variables[127][127];
-extern   char constantes[127][127];
 double evalua (elnodo *);
 
-double var[127];  // 127 variables numericas e indices
+
 static int counter1[32];
 static int indice_ctr = 0;  
 static int error_getstring = 0;
@@ -65,7 +74,7 @@ elnodo *nodo3(tiponodo, elnodo *,elnodo *,elnodo *);
 elnodo *nodo4(tiponodo, elnodo *,elnodo *,elnodo *,elnodo *);
 
 
-extern struct elnodo * nuevonodo();
+
 
 elnodo * nodo1(tiponodo  Tipo, elnodo * a)
 {
@@ -429,3 +438,4 @@ double evalua (elnodo * p) {
 	}
 }
 
+}

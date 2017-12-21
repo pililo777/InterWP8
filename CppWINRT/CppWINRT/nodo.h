@@ -1,5 +1,5 @@
 
-
+#pragma once
 typedef enum tipos_nodo {un_numero =1, desde, nombre_de_variable, 
 			indice_strings, procedimiento, secuencia , imprimir, 
 			suma, resta, multiplica, divide, si, mientras, asigna_num, asigna_alfa,

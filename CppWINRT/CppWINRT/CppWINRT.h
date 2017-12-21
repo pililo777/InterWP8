@@ -9,15 +9,6 @@ namespace CppWINRT {
 	public:
 		unsigned int GetLength(String^ strToParse);
     };
-
-
-
-
-
-
-
-
-
-
+ 
 }
 

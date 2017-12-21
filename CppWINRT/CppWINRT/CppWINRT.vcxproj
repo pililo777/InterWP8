@@ -137,6 +137,7 @@
     <ClInclude Include="CppWINRT.h" />
     <ClInclude Include="nodo.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="prueba.h" />
     <ClInclude Include="ytab.h" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +149,7 @@
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="prueba.cpp" />
     <ClCompile Include="run.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

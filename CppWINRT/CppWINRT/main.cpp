@@ -1,28 +1,26 @@
+#include "pch.h"
+
 using namespace Windows;
 
 /*  * * * * * * * * * * * * * *  main.cpp   * * * * * * * * * * */
-
-#include "pch.h"
 
 #include "stdio.h"
 #include "nodo.h"
 #include <string>
 #include <iostream>
 #include <stdlib.h>
- 
 
 
 extern int idx_prg;
 FILE * fichero = (FILE *) 0;
 extern double var[127];
-extern FILE * yyin;
-extern   char instalavar(char );
-extern char *yytext;
-extern  char contadorvar;
-extern   int yyparse(void);
-extern   void *  execut(elnodo *);
+	extern   elnodo * nuevonodo();
+
+
+
+
 extern   elnodo * pila_programas[32];
-extern   elnodo * nuevonodo();
+
 extern "C" char * strcpy ( char *  , const char *   );
 // extern "C" char * strcmp ( char *, const char * );
 extern char variables[127][127];
@@ -35,12 +33,6 @@ using namespace Platform;
 namespace CppWINRT  // test
 {
 
-
-
- 
-
- 
-
 //const char * to_cStr(String ^str)
 //{
 //char * rStr = new char[256];
@@ -52,6 +44,14 @@ namespace CppWINRT  // test
 //}
 
    
+	extern FILE * yyin;
+	extern char *yytext;
+	extern   char instalavar(char );
+	extern   int yyparse(void);
+	extern   void *  execut(elnodo *);
+	extern  char contadorvar;
+	extern   elnodo * nuevonodo();
+
 
 public ref class clase1 sealed
 	{
@@ -96,6 +96,7 @@ void clase1::liberar_nodo( elnodo * p, int n)
         
         if (p==NULL) return;
         
+
  
         if (p == pila_programas[n]) {
                 if (p->subnodos == 0) 
@@ -265,6 +266,7 @@ void clase1::liberar_nodo( elnodo * p, int n)
 
 		i = 1;
 		do {
+		
 				execut(pila_programas[i-1]);
 				i++;
 		} while (i != argc);  // (i != argc);     //para depurar:  ( (i == 1); //
