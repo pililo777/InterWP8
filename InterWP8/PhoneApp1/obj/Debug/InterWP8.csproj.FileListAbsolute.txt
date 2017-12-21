@@ -1,0 +1,8 @@
+D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\PhoneApp1\obj\Debug\InterWP8.csprojResolveAssemblyReference.cache
+D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\PhoneApp1\obj\Debug\App.g.cs
+D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\PhoneApp1\obj\Debug\MainPage.g.cs
+D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\PhoneApp1\obj\Debug\PhoneApp2.g.resources
+D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\PhoneApp1\obj\Debug\PhoneApp2.Resources.AppResources.resources
+D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\PhoneApp1\obj\Debug\InterWP8.csproj.GenerateResource.Cache
+D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\PhoneApp1\obj\Debug\PhoneApp2.dll
+D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\PhoneApp1\obj\Debug\PhoneApp2.pdb
