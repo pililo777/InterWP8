@@ -1,24 +1,6 @@
-﻿Build started 21/12/2017 16:53:40.
-     1>Project "D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\CppWINRT\CppWINRT\CppWINRT.vcxproj" on node 2 (Rebuild target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\CL.exe /c /ID:\AREA_TRABAJO_LOCAL_SSD\InterWP8\CppWINRT\CppWINRT\ /I"Generated Files\\" /IDebug\ /AI"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /ZI /ZW /ZW:nostdlib /nologo /W3 /WX- /sdl /MP /Od /Oy- /D _WINRT_DLL /D _CRT_SECURE_NO_WARNINGS /D _WINDLL /D _UNICODE /D UNICODE /D _DEBUG /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"pch.h" /Fp"Debug\CppWINRT.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\lib\platform.winmd" /FU"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata\Windows.winmd" /analyze- /errorReport:prompt pch.cpp
-         pch.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\CL.exe /c /ID:\AREA_TRABAJO_LOCAL_SSD\InterWP8\CppWINRT\CppWINRT\ /I"Generated Files\\" /IDebug\ /AI"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /ZI /ZW /ZW:nostdlib /nologo /W3 /WX- /sdl /MP /Od /Oy- /D _WINRT_DLL /D _CRT_SECURE_NO_WARNINGS /D _WINDLL /D _UNICODE /D UNICODE /D _DEBUG /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"pch.h" /Fp"Debug\CppWINRT.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\lib\platform.winmd" /FU"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata\Windows.winmd" /analyze- /errorReport:prompt CppWINRT.cpp err.cpp gram.cpp lex.cpp main.cpp prueba.cpp run.cpp
-         CppWINRT.cpp
-         err.cpp
-         gram.cpp
-         lex.cpp
-         main.cpp
-         prueba.cpp
-     1>d:\area_trabajo_local_ssd\interwp8\cppwinrt\cppwinrt\lex.cpp(7): warning C4005: '_CRT_SECURE_NO_WARNINGS' : macro redefinition
-                 command-line arguments :  see previous definition of '_CRT_SECURE_NO_WARNINGS'
-         run.cpp
-     1>d:\area_trabajo_local_ssd\interwp8\cppwinrt\cppwinrt\run.cpp(340): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
-     1>d:\area_trabajo_local_ssd\interwp8\cppwinrt\cppwinrt\run.cpp(303): warning C4101: 'pp' : unreferenced local variable
-     1>d:\area_trabajo_local_ssd\interwp8\cppwinrt\cppwinrt\run.cpp(364): warning C4101: 'result2' : unreferenced local variable
-     1>d:\area_trabajo_local_ssd\interwp8\cppwinrt\cppwinrt\run.cpp(364): warning C4101: 'result1' : unreferenced local variable
-     1>d:\area_trabajo_local_ssd\interwp8\cppwinrt\cppwinrt\run.cpp(439): warning C4715: 'CppWINRT::evalua' : not all control paths return a value
-       Link:
+﻿Build started 22/12/2017 1:56:45.
+     1>Project "D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\CppWINRT\CppWINRT\CppWINRT.vcxproj" on node 2 (Build target(s)).
+     1>Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\Debug\CppWINRT\CppWINRT.dll" /INCREMENTAL /NOLOGO WindowsPhoneCore.lib RuntimeObject.lib PhoneAppModelHost.lib /NODEFAULTLIB:ole32.lib /MANIFEST:NO /DEBUG /PDB:"D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\Debug\CppWINRT\CppWINRT.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:CONSOLE /TLBID:1 /WINMD /WINMDFILE:"D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\Debug\CppWINRT\CppWINRT.winmd" /DYNAMICBASE /NXCOMPAT /MACHINE:X86 /DLL Debug\CppWINRT.obj
          Debug\err.obj
          Debug\gram.obj
@@ -27,10 +9,9 @@
          Debug\pch.obj
          Debug\prueba.obj
          Debug\run.obj
-            Creating library D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\Debug\CppWINRT\CppWINRT.lib and object D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\Debug\CppWINRT\CppWINRT.exp
          CppWINRT.vcxproj -> D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\Debug\CppWINRT\CppWINRT.dll
-     1>Done Building Project "D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\CppWINRT\CppWINRT\CppWINRT.vcxproj" (Rebuild target(s)).
+     1>Done Building Project "D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\CppWINRT\CppWINRT\CppWINRT.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.81
+Time Elapsed 00:00:00.31

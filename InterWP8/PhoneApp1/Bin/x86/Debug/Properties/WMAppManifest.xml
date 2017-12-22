@@ -28,6 +28,7 @@
       <InProcessServer>
         <Path>CppWINRT.dll</Path>
         <ActivatableClass ActivatableClassId="CppWINRT.StringCharacterCounter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="CppWINRT.ast" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="CppWINRT.clase1" ThreadingModel="both" />
       </InProcessServer>
     </ActivatableClasses>

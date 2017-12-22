@@ -1,4 +1,5 @@
 #include "pch.h"
+#include "prueba.h"
 
 using namespace Windows;
 
@@ -13,17 +14,18 @@ using namespace Windows;
 
 extern int idx_prg;
 FILE * fichero = (FILE *) 0;
+
+extern   elnodo * nuevonodo();
+
+extern char variables[127][127];
+extern   char constantes[127][127];
 extern double var[127];
-	extern   elnodo * nuevonodo();
-
-
-
 
 extern   elnodo * pila_programas[32];
 
 extern "C" char * strcpy ( char *  , const char *   );
 // extern "C" char * strcmp ( char *, const char * );
-extern char variables[127][127];
+
 int nodos = 0;
 
 using namespace Platform;
@@ -51,6 +53,8 @@ namespace CppWINRT  // test
 	extern   void *  execut(elnodo *);
 	extern  char contadorvar;
 	extern   elnodo * nuevonodo();
+    extern ast ^convertir(elnodo * p);
+
 
 
 public ref class clase1 sealed
@@ -66,6 +70,9 @@ public ref class clase1 sealed
 			 int  asignar_num(int num, String ^s);
 		     double  run(   String ^s); //retorna la primer variable
 			 double  buscar_valor(String ^nombre);
+			 ast^    getmainprogram(); 
+			 Platform::String ^ getconstante(int posicion);
+			 double getvar (int posicion);
  
 	private:
 		 void liberar_nodo( elnodo * p, int n);
@@ -88,6 +95,28 @@ public ref class clase1 sealed
 //{
 //
 //}
+
+
+ Platform::String ^ convertFromString(const std::string & input)
+{
+    std::wstring w_str = std::wstring(input.begin(), input.end());
+    const wchar_t* w_chars = w_str.c_str();
+
+    return (ref new Platform::String(w_chars));
+}
+
+
+
+//extern double var[127];
+
+Platform::String ^ clase1::getconstante(int posicion) {
+	return convertFromString(constantes[posicion]);
+
+}
+
+double clase1::getvar (int posicion) {
+	return ::var[posicion];
+}
 
 void clase1::liberar_nodo( elnodo * p, int n)
 
@@ -185,6 +214,15 @@ void clase1::liberar_nodo( elnodo * p, int n)
         
 }
 
+ast^ clase1::getmainprogram() {
+		ast^   temp;
+		temp = ref new ast();
+		temp = convertir(pila_programas[0]);
+		liberar_nodo(pila_programas[0], 0);
+		return temp;
+	
+	}
+
  void clase1::main (int argc, String ^s)
 {
     int i;
@@ -267,13 +305,13 @@ void clase1::liberar_nodo( elnodo * p, int n)
 		i = 1;
 		do {
 		
-				execut(pila_programas[i-1]);
+			//	execut(pila_programas[i-1]);
 				i++;
 		} while (i != argc);  // (i != argc);     //para depurar:  ( (i == 1); //
 
 		fprintf (fichero, "se crearon: %d nodos\n", nodos);
 		
-		 liberar_nodo(pila_programas[0], 0);
+		 //liberar_nodo(pila_programas[0], 0);
 
 		 fprintf (fichero, "quedan: %d nodos\n", nodos);
 

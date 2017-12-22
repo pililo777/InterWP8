@@ -1,7 +1,7 @@
 #include "pch.h"
+#include "prueba.h"
 
-
-#include "nodo.h"
+//#include "nodo.h"
 
 extern   elnodo * pila_programas[32]; 
 extern   elnodo * procedimientos[127]; //cambiar esta forma
@@ -795,7 +795,6 @@ yyreduce:
 case 1:
 //#linea 55 "grammar.y"
 {  pila_programas[idx_prg] = (yyvsp[0].nodo); /* stmtseq */ ;
-	
       idx_prg++;
    ;
     break;}

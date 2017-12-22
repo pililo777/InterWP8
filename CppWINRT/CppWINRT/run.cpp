@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "nodo.h"
 #include "stdio.h"
+#include "prueba.h"
 
 extern  char variables[127][127];
 extern   char constantes[127][127];
@@ -12,12 +13,7 @@ elnodo * procedimientos[127]; //cambiar esta forma
 
 elnodo * pila_programas[32];
   int idx_prg = 0;
-
-
-
-
-
-
+ 
 namespace CppWINRT
  {
 
@@ -142,6 +138,54 @@ p->subnodos = 4;
 return p;
 
 }
+
+
+ast ^convertir(elnodo * p)
+{
+	 ast ^ast1 = ref  new ast();
+	
+	 switch (p->subnodos)
+	 {
+	 case 0:
+		 ast1->setast1((int) p->tipo, nullptr, p->num);
+		 break;
+	 case 1:
+		 		 
+		 ast1->setast1((int) p->tipo,  convertir(p->nodo1), p->num);
+		 break;
+
+	 case 2:
+		 
+		 ast1->setast2((int) p->tipo, convertir(p->nodo1), convertir(p->nodo2) , p->num);
+		  
+		 break;
+
+
+	 case 3:
+		 
+		  ast1->setast3((int) p->tipo, convertir(p->nodo1), convertir(p->nodo2), convertir(p->nodo3)  , p->num);
+		  
+		 break;
+
+	  case 4:
+		 
+		 
+		  ast1->setast4((int) p->tipo, convertir(p->nodo1), convertir(p->nodo2), convertir(p->nodo3)  , convertir(p->nodo4)  , p->num);
+		  
+		 break;
+
+
+
+	 default:
+		 break;
+	 }
+
+	 return ast1;
+}
+
+
+
+
 
 
 void * execut(elnodo *  a)

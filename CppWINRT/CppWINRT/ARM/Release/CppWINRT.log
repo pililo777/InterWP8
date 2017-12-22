@@ -1,0 +1,38 @@
+﻿Build started 22/12/2017 2:07:36.
+     1>Project "D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\CppWINRT\CppWINRT\CppWINRT.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\CL.exe /c /ID:\AREA_TRABAJO_LOCAL_SSD\InterWP8\CppWINRT\CppWINRT\ /I"Generated Files\\" /IARM\Release\ /AI"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /Zi /ZW /ZW:nostdlib /nologo /W3 /WX- /sdl /MP /O2 /Oi /Oy- /GL /D _WINRT_DLL /D NDEBUG /D _WINDLL /D _UNICODE /D UNICODE /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /D _CRT_SECURE_NO_WARNINGS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"pch.h" /Fp"ARM\Release\CppWINRT.pch" /Fo"ARM\Release\\" /Fd"ARM\Release\vc110.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\lib\arm\platform.winmd" /FU"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata\Windows.winmd" /analyze- /errorReport:prompt pch.cpp
+         pch.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\CL.exe /c /ID:\AREA_TRABAJO_LOCAL_SSD\InterWP8\CppWINRT\CppWINRT\ /I"Generated Files\\" /IARM\Release\ /AI"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /Zi /ZW /ZW:nostdlib /nologo /W3 /WX- /sdl /MP /O2 /Oi /Oy- /GL /D _WINRT_DLL /D NDEBUG /D _WINDLL /D _UNICODE /D UNICODE /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /D _CRT_SECURE_NO_WARNINGS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"pch.h" /Fp"ARM\Release\CppWINRT.pch" /Fo"ARM\Release\\" /Fd"ARM\Release\vc110.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\lib\arm\platform.winmd" /FU"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata\Windows.winmd" /analyze- /errorReport:prompt CppWINRT.cpp err.cpp gram.cpp lex.cpp main.cpp prueba.cpp run.cpp
+         CppWINRT.cpp
+         err.cpp
+         gram.cpp
+         lex.cpp
+         main.cpp
+     1>lex.cpp(7): warning C4005: '_CRT_SECURE_NO_WARNINGS' : macro redefinition
+                 command-line arguments :  see previous definition of '_CRT_SECURE_NO_WARNINGS'
+         prueba.cpp
+         run.cpp
+     1>run.cpp(384): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>run.cpp(347): warning C4101: 'pp' : unreferenced local variable
+     1>run.cpp(408): warning C4101: 'result2' : unreferenced local variable
+     1>run.cpp(408): warning C4101: 'result1' : unreferenced local variable
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\link.exe /ERRORREPORT:PROMPT /OUT:"D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\ARM\Release\CppWINRT\CppWINRT.dll" /NOLOGO WindowsPhoneCore.lib RuntimeObject.lib PhoneAppModelHost.lib /NODEFAULTLIB:ole32.lib /MANIFEST:NO /DEBUG /PDB:"D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\ARM\Release\CppWINRT\CppWINRT.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /WINMD /WINMDFILE:"D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\ARM\Release\CppWINRT\CppWINRT.winmd" /DYNAMICBASE /NXCOMPAT /MACHINE:ARM /DLL ARM\Release\CppWINRT.obj
+         ARM\Release\err.obj
+         ARM\Release\gram.obj
+         ARM\Release\lex.obj
+         ARM\Release\main.obj
+         ARM\Release\pch.obj
+         ARM\Release\prueba.obj
+         ARM\Release\run.obj
+            Creating library D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\ARM\Release\CppWINRT\CppWINRT.lib and object D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\ARM\Release\CppWINRT\CppWINRT.exp
+         Generating code
+     1>d:\area_trabajo_local_ssd\interwp8\cppwinrt\cppwinrt\run.cpp(483): warning C4715: 'CppWINRT::evalua' : not all control paths return a value
+         Finished generating code
+         CppWINRT.vcxproj -> D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\InterWP8\ARM\Release\CppWINRT\CppWINRT.dll
+     1>Done Building Project "D:\AREA_TRABAJO_LOCAL_SSD\InterWP8\CppWINRT\CppWINRT\CppWINRT.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.10

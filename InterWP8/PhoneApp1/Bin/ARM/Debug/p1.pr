@@ -1,4 +1,9 @@
-        numero =  numerito
+        imprimir 'demostracion de un lenguaje de programacion para moviles'
+        imprimir 'en este programa'
+        imprimir 'intentamos hallar la raiz cuadrada'
+        imprimir 'del numero 23'
+
+        numero =  23
 		
 		divisor = 1
 		
